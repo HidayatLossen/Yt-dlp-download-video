@@ -26,10 +26,6 @@ Dokumentasi ini berisi contoh penggunaan **yt-dlp** dan **ffmpeg** untuk mengund
 
 ---
 
-Oke, saya satukan jadi **README.md** versi final dengan bagian instalasi Python + pip, lalu lanjut ke instalasi yt-dlp dan ffmpeg. Saya buat agar lebih rapi:
-
----
-
 ## 🔧 Persiapan
 
 1. **Instal Python & pip** 
@@ -304,6 +300,7 @@ Selain YouTube member-only, yt-dlp juga mendukung banyak situs lain, antara lain
 - Niconico
 - Dailymotion
 - Twitch (video VOD)
+- DLL ( Asalkan bisa menggunakan Cookies )
 
 Pastikan situs yang dituju didukung oleh yt-dlp dan kamu menggunakan cookies hasil login yang valid agar dapat mengakses konten berbayar atau terbatas.
 
