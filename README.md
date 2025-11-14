@@ -111,8 +111,15 @@ Menggunakan file cookies (`coba.txt`) yang diexport dari browser
 ```powershell
 yt-dlp --cookies coba.txt -f "bv*[ext=mp4][vcodec!*=av01]+ba[ext=m4a]" --merge-output-format mp4 -o "%(playlist_index)s - %(title)s.%(ext)s" "URL_PLAYLIST atau URL_VIDEO"
 ```
+### **4. Dengan file cookies manual + JS Runtime (khusus versi yt-dlp terbaru 2025+)**
 
-### 4. Download rentang index tertentu (misal 13–42)
+Menggunakan file cookies (`coba.txt`) yang diekspor dari browser dan menambahkan JS runtime (khusus untuk yt-dlp versi 2025 ke atas). Opsi ini digunakan hanya jika metode pada poin 3 gagal, terutama ketika YouTube memerlukan JavaScript evaluation untuk proses signature decryption terbaru.
+
+```powershell
+yt-dlp --cookies coba.txt --js-runtimes node --remote-components ejs:github -f "bv*[ext=mp4][vcodec!*=av01]+ba[ext=m4a]" --merge-output-format mp4 -o "%(playlist_index)s - %(title)s.%(ext)s" "URL_PLAYLIST atau URL_VIDEO"
+```
+
+### 5. Download rentang index tertentu (misal 13–42)
 
 Mengunduh hanya video dengan urutan tertentu dari playlist.
 
@@ -120,7 +127,7 @@ Mengunduh hanya video dengan urutan tertentu dari playlist.
 yt-dlp --cookies coba.txt -f "bv*[ext=mp4][vcodec!*=av01]+ba[ext=m4a]" --merge-output-format mp4 --playlist-start 13 --playlist-end 42 -o "%(playlist_index)s - %(title)s.%(ext)s" "URL_PLAYLIST"
 ```
 
-### 5. Download berdasarkan index pilihan
+### 6. Download berdasarkan index pilihan
 
 Mengunduh video tertentu sesuai nomor urut di playlist (misalnya 1, 5, 7, 10).
 
